@@ -1,0 +1,83 @@
+
+:root {
+  --dark-shade0: #1e222a;
+
+  --dark-shade1: #393d44;
+
+  --dark-shade2: #55585d;
+
+  --dark-shade3: #707377;
+
+  --dark-shade4: #8c8d91;
+
+  --dark-shade5: #a7a8ab;
+
+  --dark-shade6: #c3c3c4;
+
+  --dark-shade7: #dedede;
+
+  --dark-accent0: #e06c75;
+
+  --dark-accent1: #636d83;
+
+  --dark-accent2: #e5c07b;
+
+  --dark-accent3: #98c379;
+
+  --dark-accent4: #958a56;
+
+  --dark-accent5: #61afef;
+
+  --dark-accent6: #abb2bf;
+
+  --dark-accent7: #c678dd;
+}
+
+* {
+  font-family:monospace;
+  color:var(--dark-shade7);
+  font-size:2.5vh;
+}
+
+body {
+  background-color:var(--dark-shade0);
+  margin-left: 5%;
+  margin-right: 5%;
+  padding:20px;
+}
+
+h1 {
+  color:var(--dark-accent2);
+  font-size:4vh;
+}
+
+h2 {
+  color:var(--dark-accent4);
+  font-size:3vh;
+}
+
+h3 {
+  color:var(--dark-accent3);
+}
+
+a {
+  color: var(--dark-accent5);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--dark-accent3);
+  text-decoration: underline;
+}
+
+a:active {
+  color: var(--dark-accent2);
+}
+
+::selection,
+::-moz-selection,
+::-o-selection,
+::-ms-selection, 
+::-webkit-selection {
+  background-color: var(--dark-accent4);
+}
