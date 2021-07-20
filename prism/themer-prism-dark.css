@@ -65,7 +65,7 @@
         }
         
         .token.punctuation {
-          color: #958a56;
+          color: #d8d4be;
         }
         
         .namespace {
@@ -105,7 +105,7 @@
         .token.atrule,
         .token.attr-value,
         .token.keyword {
-          color: #636d83;
+          color: #98c379;
         }
         
         .token.function,
@@ -116,7 +116,7 @@
         .token.regex,
         .token.important,
         .token.variable {
-          color: #abb2bf;
+          color: #c678dd;
         }
         
         .token.important,
