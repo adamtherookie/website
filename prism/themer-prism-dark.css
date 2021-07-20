@@ -48,8 +48,19 @@
         :not(pre) > code[class*="language-"],
         pre[class*="language-"] {
           background: #1e222a;
+          border-radius: .3em;
+          border:1px solid #dedede;
+          transition:0.6s;
         }
         
+        pre[class*="language-"]:hover {
+          background: #1e222a;
+          border-radius: .3em;
+          border:1px solid #dedede;
+          box-shadow:black 10px 10px 20px;
+          transition:0.6s;
+        }
+
         /* Inline code */
         :not(pre) > code[class*="language-"] {
           padding: .1em;
@@ -65,7 +76,7 @@
         }
         
         .token.punctuation {
-          color: #d8d4be;
+          color: #958a56;
         }
         
         .namespace {
