@@ -49,14 +49,16 @@
         pre[class*="language-"] {
           background: #1e222a;
           border-radius: .3em;
-          border:1px solid #dedede;
         }
         
-        pre[class*="language-"]:hover {
-          background: #1e222a;
+        pre:hover {
+          background: #393d44;
           border-radius: .3em;
-          border:1px solid #dedede;
-          box-shadow:black 10px 10px 20px;
+          box-shadow:black 0px 0px 20px;
+        }
+
+        pre:hover * {
+          background: #393d44;
         }
 
         /* Inline code */
