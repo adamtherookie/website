@@ -47,6 +47,11 @@ body {
   padding:20px;
 }
 
+.date {
+  color:var(--dark-shade3);
+  font-size:2vh;
+}
+
 h1 {
   color:var(--dark-accent2);
   font-size:4vh;
