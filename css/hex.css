@@ -74,6 +74,7 @@ a {
 a:hover {
   color: var(--dark-accent3);
   text-decoration: underline;
+  padding-left:1vw;
 }
 
 a:active {
