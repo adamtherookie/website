@@ -1,0 +1,3 @@
+﻿https://aa2006.netlify.app/index.html
+https://aa2006.netlify.app/posts/cheese_engine.html
+https://aa2006.netlify.app/posts/hello_world.html
