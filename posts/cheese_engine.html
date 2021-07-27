@@ -17,12 +17,51 @@
 <p>So, my friend <a href="https://github.com/segfaultdev">@segfaultdev</a> and I wrote a chess engine called <a href="https://github.com/cheese-chess/cheese_chess">cheese</a>. Yay. Only problem, we didn't know about the <a href="https://en.wikipedia.org/wiki/Universal_Chess_Interface">UCI</a> protocol or <em>anything</em> about chess programming. Which meant our engine was kinda useless. So, I started out trying to rewrite cheese in C following all the rules, using <a href="https://www.chessprogramming.org/Bitboards">bitboards</a> etc etc.... Until I realised that, I was writing this engine for <em>fun</em>, so why not try to write it in an easy language first, until I master the concepts behind chess programming, then maybe do a rewrite (yes, a rewrite again) in whatever language I want. So, I chose to write cheese V2.0 in python, using the <a href="https://github.com/niklasf/python-chess">python-chess</a> library for move validation and board representation.</p>
 <h2>## The AI</h2>
 <h3>### Piece Evaluation</h3>
-<p>First of all, we need to identify the values of each piece. Personally, I want to have the piece evaluation function achieve these four things:</p>
+<p>First of all, we need to identify the values of each piece. Personally, I want to have the piece evaluation function achieve these three things:</p>
 <ol>
     <li>Try not to trade a minor piece (knight and bishop) for 3 pawns</li>
     <li>Encourage the engine to keep the bishop pair (bishop together strong lol)</li>
     <li>Try not to exchange two minor pieces for a rook and a pawn</li>
 </ol>
+<p>So, the values of each piece need to help the engine achieve the above three things. We can start with:</p>
+<pre><code class="language-py">B > 3*P
+N > 3*P
+</code></pre>
+<p>Next, we can put:</p>
+<pre><code class="language-py">B > N
+</code></pre>
+<p>Combining 1 and 2, we can say that:</p>
+<pre><code class="language-py">B > N > 3*P
+</code></pre>
+<p>For the final condition, we can put something like:</p>
+<pre><code class="language-py">B + N = R + 1.5*P</code></pre>
+<p>So, an example piece value table that satisfies all of the above is:</p>
+<pre><code class="language-py">P = 100
+N = 320
+B = 330
+R = 500
+Q = 900
+K = 20000
+</code></pre>
+<p>So the simplest evaluation function will loop over every square of the board, and, if the piece is white, it will add to the value, and if the piece is black, it will subtract. A simple implementation is:</p>
+<pre><code class="language-py">def eval_material(board):
+    material = 0
+    for square in chess.SQUARES:
+        if board.piece_at(square) == chess.PAWN:
+            material += 100 if piece.color else material -= 100
+        if board.piece_at(square) == chess.KNIGHT:
+            material += 320 if piece.color else material -= 320
+        if board.piece_at(square) == chess.BISHOP:
+            material += 330 if piece.color else material -= 330
+        if board.piece_at(square) == chess.ROOK: 
+            material += 500 if piece.color else material -= 500
+        if board.piece_at(square) == chess.QUEEN: 
+            material += 900 if piece.color else material -= 900
+        if board.piece_at(square) == chess.KING: 
+            material += 20000 if piece.color else material -= 20000
+    
+    return material 
+</code></pre>
 <a href="../index.html">Go back</a>
 </body>
 </html>
