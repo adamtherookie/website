@@ -11,7 +11,7 @@
 </head>
 <body>
 <script src="../prism/prism.js"></script>
-<h1># Writing my own chess engine (CCE)</h1>
+<h1># Writing my own chess engine (CCE)<span class="date"> on Monday July 26th, 2021</span></h1>
 
 <h2>## Introduction</h2>
 <p>So, my friend <a href="https://github.com/segfaultdev">@segfaultdev</a> and I wrote a chess engine called <a href="https://github.com/cheese-chess/cheese_chess">cheese</a>. Yay. Only problem, we didn't know about the <a href="https://en.wikipedia.org/wiki/Universal_Chess_Interface">UCI</a> protocol or <em>anything</em> about chess programming. Which meant our engine was kinda useless. So, I started out trying to rewrite cheese in C following all the rules, using <a href="https://www.chessprogramming.org/Bitboards">bitboards</a> etc etc.... Until I realised that, I was writing this engine for <em>fun</em>, so why not try to write it in an easy language first, until I master the concepts behind chess programming, then maybe do a rewrite (yes, a rewrite again) in whatever language I want. So, I chose to write cheese V2.0 in python, using the <a href="https://github.com/niklasf/python-chess">python-chess</a> library for move validation and board representation.</p>
