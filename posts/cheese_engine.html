@@ -44,7 +44,9 @@ Q = 900
 K = 20000
 </code></pre>
 <p>So the simplest evaluation function will loop over every square of the board, and, if the piece is white, it will add to the value, and if the piece is black, it will subtract. A simple implementation is:</p>
-<pre><code class="language-py">def eval_material(board):
+<pre><code class="language-py">import chess
+
+def eval_material(board):
     material = 0
     for square in chess.SQUARES:
         if board.piece_at(square) == chess.PAWN:
@@ -62,6 +64,24 @@ K = 20000
     
     return material 
 </code></pre>
+
+<h3>### Searching for moves</h3>
+<p>Using our evaluation function, we can start implementing a function that will search for the best move. We will be using the <a href="https://en.wikipedia.org/wiki/Minimax">minimax</a> algorithm. However, because of the exponential nature of the possibilities of chess games, and the limitations by our computing hardware, we can't search <em>all</em> the possible games in time. Therefore, we implement <a href="https://en.wikipedia.org/wiki/Alpha%E2%80%93beta_pruning">Alpha-Beta Pruning</a> to speed up the process, which will stop searching deeper into the tree once it finds a bad value. See the below image:</p>
+<img src="../assets/alpha-beta-pruning.png">
+<p>As you can see, it stops searching deeper when it finds a value that is less than the previous one. (or bigger, depends on whether you are minimizing or maximizing). And, that's all, after implementing this we now have a playable chess engine. Of course there are still enhancements we can implement, like <a href="https://rustic-chess.org/evaluation/psqt.html">piece square tables</a> and <a href="https://www.chessprogramming.org/Opening_Book">openings</a> etc...</p>
+
+<h3>### Playing it on lichess</h3>
+<p>I hooked up cheese to <a href="https://github.com/ShailChoksi/lichess-bot">lichess-bot</a>, which uses the UCI protocol to communicate with the lichess API. You can challenge cheese <a href="https://lichess.org/@/Cheese_Chess_Engine">here</a>. You can see a full specification of the UCI protocol <a href="http://wbec-ridderkerk.nl/html/UCIProtocol.html">here</a>. You can see the source code <a href="https://github.com/cheese-chess/cheese_py">here</a>.</p>
+
+<h2>## Resources</h2>
+<p>In case you want to build your own chess engine, here are some helpful resources:</p>
+<ul>
+    <li><a href="https://www.chessprogramming.org/Main_Page">Chess Programming Wiki</a></li>
+    <li><a href="https://www.youtube.com/watch?v=l-hh51ncgDI">Algorithms Explained – minimax and alpha-beta pruning</a></li>
+    <li><a href="https://github.com/thomasahle/sunfish">Sunfish Source Code</a></li>
+</ul>
+
+<p>Until next time, happy coding (:</p>
 <a href="../index.html">Go back</a>
 </body>
 </html>

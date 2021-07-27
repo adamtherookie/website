@@ -71,6 +71,12 @@ a {
   text-decoration: none;
 }
 
+img {
+  margin-left:auto;
+  margin-right:auto;
+  display:block;
+}
+
 a:hover {
   color: var(--dark-accent3);
   text-decoration: underline;
