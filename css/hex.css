@@ -72,16 +72,32 @@ h3 {
 }
 
 a {
+  color:var(--dark-accent5);
+  background: linear-gradient(to right, var(--dark-shade0), var(--dark-shade0)), linear-gradient(to right, var(--dark-accent5), var(--dark-accent3));
+  background-size: 100% 0.1em, 0 0.1em;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  text-decoration:none;
+}
+
+a:hover,
+a:focus {
+  color:var(--dark-accent3);
+  background-size: 0 0.1em, 100% 0.1em;
+}
+
+/*
+a {
   color: var(--dark-accent5);
   text-decoration: none;
 }
-
+*/
 img {
   margin-left:auto;
   margin-right:auto;
   display:block;
 }
-
+/*
 a:hover {
   color: var(--dark-accent3);
   text-decoration: underline;
@@ -90,6 +106,7 @@ a:hover {
 a:active {
   color: var(--dark-accent2);
 }
+*/
 
 ::selection,
 ::-moz-selection,
