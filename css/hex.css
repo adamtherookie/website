@@ -47,14 +47,26 @@
 
 body {
   background-color:var(--dark-shade0);
-  margin-left: 5%;
-  margin-right: 5%;
+  margin-left: 20%;
+  margin-right: 20%;
   padding:20px;
+}
+
+li {
+  line-height: 1.7;
+}
+
+code {
+  overflow-x:scroll;
 }
 
 .date {
   color:var(--dark-shade3);
   font-size:2vh;
+}
+
+p {
+  text-indent: 50px;
 }
 
 h1 {
