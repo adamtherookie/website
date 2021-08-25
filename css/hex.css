@@ -86,7 +86,7 @@ h3 {
 a {
   color:var(--dark-accent5);
   background: linear-gradient(to right, var(--dark-shade0), var(--dark-shade0)), linear-gradient(to right, var(--dark-accent5), var(--dark-accent3));
-  background-size: 100% 0.1em, 0 0.1em;
+  background-size: 100% 2px, 0 2px;
   background-position: 100% 100%, 0 100%;
   background-repeat: no-repeat;
   text-decoration:none;
@@ -95,7 +95,7 @@ a {
 a:hover,
 a:focus {
   color:var(--dark-accent3);
-  background-size: 0 0.1em, 100% 0.1em;
+  background-size: 0 2px, 100% 2px;
 }
 
 /*
