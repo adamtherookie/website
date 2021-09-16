@@ -3,7 +3,6 @@
   src: url('../assets/Source-Code-Pro-Semibold.ttf');
 }
 
-
 :root {
   --dark-shade0: #1e222a;
 
@@ -23,17 +22,17 @@
 
   --dark-accent0: #e06c75;
 
-  --dark-accent1: #636d83;
+  --dark-accent1: #68829e;
 
   --dark-accent2: #e5c07b;
 
-  --dark-accent3: #98c379;
+  --dark-accent3: #61afef;
 
-  --dark-accent4: #958a56;
+  --dark-accent4: #c678dd;
 
-  --dark-accent5: #61afef;
+  --dark-accent5: #98c379;
 
-  --dark-accent6: #abb2bf;
+  --dark-accent6: #98c379;
 
   --dark-accent7: #c678dd;
 }
@@ -75,12 +74,12 @@ h1 {
 }
 
 h2 {
-  color:var(--dark-accent4);
+  color:var(--dark-accent1);
   font-size:3vh;
 }
 
 h3 {
-  color:var(--dark-accent3);
+  color:var(--dark-accent4);
 }
 
 a {
