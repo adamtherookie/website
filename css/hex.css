@@ -133,3 +133,8 @@ a:active {
 ::-webkit-selection {
   background-color: var(--dark-accent4);
 }
+
+pre {
+  border:1px solid #dedede;
+  border-radius:10px;
+}
