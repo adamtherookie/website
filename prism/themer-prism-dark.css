@@ -100,7 +100,7 @@
         .token.url,
         .language-css .token.string,
         .style .token.string {
-          color: --color1;
+          color: var(--color1;
         }
         
         .token.atrule,
