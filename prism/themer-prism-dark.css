@@ -2,7 +2,7 @@
         code[class*="language-"],
         pre[class*="language-"] {
           color: #dedede;
-          background: #1e222a;
+          background: #--background;
           text-shadow: none;
           font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
           font-size: 1em;
@@ -47,7 +47,7 @@
         
         :not(pre) > code[class*="language-"],
         pre[class*="language-"] {
-          background: #1e222a;
+          background: #--background;
         }
         
         /* Inline code */
