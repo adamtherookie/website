@@ -5,11 +5,6 @@
   src: url('../assets/Source-Code-Pro-Semibold.ttf');
 }
 
-.wallpaper {
-  background: var(--wallpaper);
-  height:100%;
-}
-
 * {
   font-family:'Source Code Pro', monospace;
   color:var(--color7);
