@@ -78,7 +78,7 @@
         .token.boolean,
         .token.number,
         .token.constant {
-          color: #e5c07b;
+          color: var(--color7);
         }
 
         .token.symbol,
