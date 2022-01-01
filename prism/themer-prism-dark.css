@@ -106,7 +106,7 @@
         .token.atrule,
         .token.attr-value,
         .token.keyword {
-          color: --color4;
+          color: --color4);
         }
         
         .token.function,
