@@ -111,7 +111,7 @@
         
         .token.function,
         .token.class-name {
-          color: #98c379;
+          color: --color1;
         }
         
         .token.regex,
