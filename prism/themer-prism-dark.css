@@ -62,7 +62,7 @@
         .token.prolog,
         .token.doctype,
         .token.cdata {
-          color: color3;
+          color: --color3;
         }
         
         .token.punctuation {
