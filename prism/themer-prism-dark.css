@@ -111,7 +111,7 @@
         
         .token.function,
         .token.class-name {
-          color: var--color1;
+          color: var(--color1;
         }
         
         .token.regex,
