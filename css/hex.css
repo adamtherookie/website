@@ -5,7 +5,7 @@
   src: url('../assets/Source-Code-Pro-Semibold.ttf');
 }
 
-.img {
+.wallpaper {
   background: var(--wallpaper);
   height:100;
 }
