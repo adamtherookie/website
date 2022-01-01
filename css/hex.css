@@ -5,49 +5,15 @@
   src: url('../assets/Source-Code-Pro-Semibold.ttf');
 }
 
-:root {
-  --dark-shade0: #1e222a;
-
-  --dark-shade1: #393d44;
-
-  --dark-shade2: #55585d;
-
-  --dark-shade3: #707377;
-
-  --dark-shade4: #8c8d91;
-
-  --dark-shade5: #a7a8ab;
-
-  --dark-shade6: #c3c3c4;
-
-  --dark-shade7: #dedede;
-
-  --dark-accent0: #e06c75;
-
-  --dark-accent1: #68829e;
-
-  --dark-accent2: #e5c07b;
-
-  --dark-accent3: #61afef;
-
-  --dark-accent4: #c678dd;
-
-  --dark-accent5: #98c379;
-
-  --dark-accent6: #98c379;
-
-  --dark-accent7: #c678dd;
-}
-
 * {
   font-family:'Source Code Pro', monospace;
-  color:var(--dark-shade7);
+  color:var(--color7);
   font-size:2.5vh;
   transition:0.6s;
 }
 
 body {
-  background-color:var(--dark-shade0);
+  background-color:var(--background);
   margin-left: 20%;
   margin-right: 20%;
   padding:20px;
@@ -62,7 +28,7 @@ code {
 }
 
 .date {
-  color:var(--dark-shade3);
+  color:var(--color3);
   font-size:2vh;
 }
 
@@ -71,22 +37,22 @@ p {
 }
 
 h1 {
-  color:var(--dark-accent2);
+  color:var(--color2);
   font-size:4vh;
 }
 
 h2 {
-  color:var(--dark-accent1);
+  color:var(--color1);
   font-size:3vh;
 }
 
 h3 {
-  color:var(--dark-accent4);
+  color:var(--color4);
 }
 
 a {
-  color:var(--dark-accent5);
-  background: linear-gradient(to right, var(--dark-shade0), var(--dark-shade0)), linear-gradient(to right, var(--dark-accent5), var(--dark-accent3));
+  color:var(--color5);
+  background: linear-gradient(to right, var(--color0), var(--color0)), linear-gradient(to right, var(--color5), var(--color3));
   background-size: 100% 2px, 0 2px;
   background-position: 100% 100%, 0 100%;
   background-repeat: no-repeat;
@@ -95,13 +61,13 @@ a {
 
 a:hover,
 a:focus {
-  color:var(--dark-accent3);
+  color:var(--color3);
   background-size: 0 2px, 100% 2px;
 }
 
 /*
 a {
-  color: var(--dark-accent5);
+  color: var(--color5);
   text-decoration: none;
 }
 */
@@ -112,12 +78,12 @@ img {
 }
 /*
 a:hover {
-  color: var(--dark-accent3);
+  color: var(--color3);
   text-decoration: underline;
 }
 
 a:active {
-  color: var(--dark-accent2);
+  color: var(--color2);
 }
 */
 
@@ -133,7 +99,7 @@ a:active {
 ::-o-selection,
 ::-ms-selection, 
 ::-webkit-selection {
-  background-color: var(--dark-accent4);
+  background-color: var(--color4);
 }
 
 pre {
