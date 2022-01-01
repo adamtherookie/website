@@ -117,7 +117,7 @@
         .token.regex,
         .token.important,
         .token.variable {
-          color: #98c379;
+          color: --color1;
         }
         
         .token.important,
