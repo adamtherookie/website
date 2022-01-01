@@ -5,6 +5,10 @@
   src: url('../assets/Source-Code-Pro-Semibold.ttf');
 }
 
+.img {
+  background: url('./colors.css')
+}
+
 * {
   font-family:'Source Code Pro', monospace;
   color:var(--color7);
