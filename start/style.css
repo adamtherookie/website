@@ -1,28 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
 
-:root {
-    /* Special */
-    --background: #121c2d;
-    --foreground: #cbdde8;
-    --cursor: #cbdde8;
 
-    /* Colors */
-    --color0: #121c2d;
-    --color1: #5D8EB6;
-    --color2: #5B96CE;
-    --color3: #6AAADB;
-    --color4: #72B6E3;
-    --color5: #B3BC9D;
-    --color6: #8DB6DD;
-    --color7: #cbdde8;
-    --color8: #8e9aa2;
-    --color9: #5D8EB6;
-    --color10: #5B96CE;
-    --color11: #6AAADB;
-    --color12: #72B6E3;
-    --color13: #B3BC9D;
-    --color14: #8DB6DD;
-    --color15: #cbdde8;
+:root {
+  --background: #282c34;
+  --foreground: #abb2bf;
+  
+  --color0: #e06c75;
+  --color1: #d19a66;
+  --color2: #e5c07b;
+  --color3: #98c379;
+  --color4: #56b6c2;
+  --color5: #61afef;
+  --color6: #c678dd;
+  --color7: #be7d68;
 }
 
 * {
@@ -32,7 +22,7 @@
 html, body {
   background: var(--background);
   color: var(--foreground);
-  font-family: "Fira Code", monospace;
+  font-family: "FiraCode Nerd Font", "Fira Code", monospace;
   height: 100%;
   width: 100%;
   margin: 0;
@@ -64,7 +54,7 @@ html, body {
 
 .right-container {
   grid-area: right;
-  height: 50%;
+  height: 75%;
   width: 100%;
 }
 
@@ -119,7 +109,7 @@ li {
 
 a {
   color:var(--color5);
-  background: linear-gradient(to right, var(--color0), var(--color0)), linear-gradient(to right, var(--color5), var(--color3));
+  background: linear-gradient(to right, var(--background), var(--background)), linear-gradient(to right, var(--color5), var(--color3));
   background-size: 100% 2px, 0 2px;
   background-position: 100% 100%, 0 100%;
   background-repeat: no-repeat;
@@ -155,7 +145,7 @@ a:focus {
 }
 
 #at {
-  color: var(--color7);
+  color: var(--foreground);
 }
 
 #hostname {
