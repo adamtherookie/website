@@ -1,12 +1,12 @@
 @import url('../css/colors.css');
 
 @font-face {
-  src: url('../assets/Fira\ Code\ Medium\ Nerd\ Font\ Complete\ Mono.ttf');
-  font-family: "Fira Code";
+  src: url('../assets/JetBrainsMono-Regular.ttf');
+  font-family: "JetBrains Mono";
 }
 
 * {
-  font-family:'Fira Code', monospace;
+  font-family:'JetBrains Mono', monospace;
   color:var(--foreground);
   font-size:2.5vh;
   transition:0.6s;
