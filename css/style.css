@@ -106,3 +106,51 @@ pre {
   border:1px solid #dedede;
   border-radius:10px;
 }
+
+.grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 10px;
+}
+
+.grid p {
+  text-indent: 0;
+}
+
+.project {
+  background-color: #1b1b25;
+  border-radius:5px;
+  padding: 10px;
+  text-align: center;
+}
+
+.project:hover {
+  box-shadow: 0px 0px 5px black;
+}
+
+hr {
+  width: 30%;
+}
+
+.badge {
+    display: inline-block;
+    min-width: 3px; /* pixel unit */
+    padding: 7px 10px; /* pixel unit */
+    border-radius: 50%;
+    font-size: 0.5em;
+    text-align: center;
+    color: var(--background);
+}
+
+.py {
+  background-color: var(--color5)
+}
+
+.c {
+  background-color: grey
+}
+
+.gd {
+  background-color: teal;
+}
+
