@@ -6,17 +6,17 @@
 
 
 :root {
-  --background: #282c34;
-  --foreground: #abb2bf;
-  
-  --color0: #e06c75;
-  --color1: #d19a66;
-  --color2: #e5c07b;
-  --color3: #98c379;
-  --color4: #56b6c2;
-  --color5: #61afef;
-  --color6: #c678dd;
-  --color7: #be7d68;
+  --background: #2e3440;
+  --foreground: #ffffff;
+
+  --color0: #bf616a;
+  --color1: #d08770;
+  --color2: #ebcb8b;
+  --color3: #a3be8c;
+  --color4: #88c0d0;
+  --color5: #81a1c1;
+  --color6: #b48ead;
+  --color7: #8fbcbb;
 }
 
 * {
