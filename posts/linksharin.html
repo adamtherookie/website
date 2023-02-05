@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How I created a Linktree alternative</title>
+  <link rel="icon" type="image/png" href="../assets/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="../assets/favicon-16x16.png" sizes="16x16" />
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../prism/themer-prism-dark.css">
+  <link rel="stylesheet" href="../prism/prism.css">
+</head>
+<body>
+<script src="../prism/prism.js"></script>
+<h1># How I created a Linktree alternative<span class="date"> on Sunday February 5th, 2023</span></h1>
+<p>I remember finding out about <a href="https://linktr.ee/">Linktree</a> back in 2021. It's a pretty cool link in bio tool with great design and awesome customizations. However, most of the "cool" customization options weren't free, and the free analytics plan wasn't good enough. This surprised me, because the concept of the website was really simple: a one-page HTML generator with custom CSS. If you knew some web development, you could create your own page and host it on <a href="https://www.netlify.com/">Netlify</a> for free. So I said to myself: why not create an open-source alternative? How hard could it be?</p>
+
+<h2>## Choosing the backend framework</h2>
+<p>I chose to use Python with <a href="https://www.djangoproject.com/">Django</a> as the back-end framework mostly because of it's large plugin ecosystem, rich documentation, and its security. I also like the way it handles databases by using models instead of letting the developer interact with the actual data. This is extremely useful especially when you're clumsy like me and could accidentally delete an entire table (:</p>
+
+<h2>## Choosing the frontend framework</h2>
+<p>Initially, I didn't want to use a CSS framework because I wanted to write the entire CSS from scratch. However, during the early phases of development, I found writing CSS code every few minutes while testing out new mechanisms tedious, so I chose to use <a href="https://getbootstrap.com/docs/3.3/">Bootstrap</a> until I had a functional backend, but when I <em>did</em> have it, I realized I was happy with the way the UI looked, so I kept it. Before settling for Bootstrap, I had consired using <a href="https://bulma.io/">Bulma</a> as well, but it's relatively new and small compared to Bootstrap (and I just wanted to focus on the backend).</p>
+
+<h2>## The hard part</h2>
+<p>Now we need to work on the hard part: actually letting the user create their page, and fill it with links. At first, I considered making an HTML file for each user, but that turned out to be very inefficient. In the end, I made a table in my database for pages, which was connected with a Foreign Key to the categories table, which in turn was connected to the links table. I then made a template page, with areas for a profile picture, bio, and the actual categories + links. Then I set up a route on my app at:
+<pre> /@/&lt;username&gt;</pre>
+Visiting that route would fetch the user's data from the database, fill out the template page, and finally render it. But there's another problem: how does the user actually fill and customize their page?
+</p>
+<p>After a lot of trial and error, I settled for an HTML textarea in which the user types out their links and categories using MD. Headers are categories, and links are... links. I also used some JavaScript magic to add buttons to automate that process for people who don't know MD. Then we do some very inefficient black sorcery: I first use the python markdown module to convert the markdown to HTML. Then I use Beautiful Soup to parse the generated HTML and get the headers and the links under them, adding them to the database as we go. The other customization options are easy because they don't need a complicated parser. We can just delete the entry from the database, and push the new one.</p>
+
+<h2>## Analytics</h2>
+<p>This is a must for a link in bio tool. Currently I only have the total number of views and a chart of views per day, but I'm working on more options. I used another table in my database for the views, and each time a user's page is loaded, a view is created with the username and date. Then, whenever a user goes to their dashboard, the server quickly counts all the views with their username, compiles them in an array, and send the data to the template, where I used <a href="https://www.chartjs.org/">Charts.js</a> to render the graph.</p>
+
+<h2>## Moving forward</h2>
+<p>Here's a list of things I plan to implement:</p>
+<ul>
+  <li>Show geographical distribution of visitors</li>
+  <li>Add more customization options</li>
+  <li>Make a more natural drag-and-grop mechanism for adding links</li>
+  <li>Show traffic sources</li>
+  <li>Add options for e-commerce stores</li>
+  <li>Make a mobile app</li>
+</ul>
+
+<h2>## The project</h2>
+<p>You can find the GitHub repo <a href="https://github.com/adamtherookie/linksharin">here</a>.</p>
+
+<a href="../index.html">Go back</a>
+</body>
+</html>

@@ -8,7 +8,6 @@
 * {
   font-family:'JetBrains Mono', monospace;
   color:var(--foreground);
-  font-size:2.5vh;
   transition:0.6s;
 }
 
@@ -29,7 +28,7 @@ code {
 
 .date {
   color:var(--color3);
-  font-size:2vh;
+  font-size:small;
 }
 
 p {
@@ -38,12 +37,12 @@ p {
 
 h1 {
   color:var(--color2);
-  font-size:4vh;
+  font-size:larger;
 }
 
 h2 {
   color:var(--color1);
-  font-size:3vh;
+  font-size:large;
 }
 
 h3 {
@@ -91,7 +90,6 @@ a:active {
   body {
     margin-left:5%;
     margin-right:5%;
-    font-size:1vh;
   }
 }
 
